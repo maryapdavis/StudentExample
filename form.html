@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Autocomplete Example With Ajax</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $.ajax({
+            url: "ajax_get_students.php",
+            dataType: "xml",
+            success: function( xmlResponse ) {
+                var data = $( "student", xmlResponse ).map(function() {
+                    return {            
+                      value: $(this).attr("name") + " " + $(this).attr("surname")
+                    };
+                }).get();
+                $( "#student" ).autocomplete({
+                    source: data,
+                    minLength: 0
+                });
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<div class="container">
+<h2>Student Search</h2>
+<form>
+<div class="ui-widget">
+<label for="student">Student Name: </label>
+<input id="student">
+</div>     
+<div class="ui-widget">
+<input type="submit" value="Search">
+</div>                
+</form>
+</div>
+</body>
+</html>
