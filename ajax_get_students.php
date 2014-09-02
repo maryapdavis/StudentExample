@@ -3,7 +3,7 @@ $dom = new DOMDocument("1.0");
 $node = $dom->createElement("students");
 $parnode = $dom->appendChild($node);
 header("Content-type: text/xml");
-$connection = new mysqli("localhost","root","","kidsapp");
+$connection = new mysqli("host","user","password","database");
 $sql = "select name, surname
         from student";
 if (!($stmt=$connection->prepare($sql))) {
