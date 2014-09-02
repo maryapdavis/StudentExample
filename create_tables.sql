@@ -1,0 +1,13 @@
+CREATE TABLE student(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(20), surname VARCHAR(20), PRIMARY KEY (id));
+INSERT INTO student (name, surname) VALUES ('Harry','Potter');
+INSERT INTO student (name, surname) VALUES ('Hermione', 'Granger');
+INSERT INTO student (name, surname) VALUES ('Ron', 'Weasley');
+INSERT INTO student (name, surname) VALUES ('Ludo', 'Bagman');
+INSERT INTO student (name, surname) VALUES ('Katie', 'Bell');
+INSERT INTO student (name, surname) VALUES ('Susan', 'Bones');
+INSERT INTO student (name, surname) VALUES ('Lavender', 'Brown');
+INSERT INTO student (name, surname) VALUES ('Neville', 'Longbottom');
+INSERT INTO student (name, surname) VALUES ('Draco', 'Malfoy');
+INSERT INTO student (name, surname) VALUES ('Fred', 'Weasley');
+INSERT INTO student (name, surname) VALUES ('Percy', 'Weasley');
+INSERT INTO student (name, surname) VALUES ('Molly', 'Weasley');
